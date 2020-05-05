@@ -8,7 +8,7 @@ from funcs import userify, hasher
 import app
 
 print("Conectando con el servidor...", end='\r')
-#creds = yaml.safe_load(open('credentials.yaml'))
+creds = yaml.safe_load(open('credentials.yaml'))
 ACCESS_KEY = creds.get('ACCESS_KEY')
 SECRET_KEY = creds.get('SECRET_KEY')
 ddb = boto3.resource('dynamodb', region_name='eu-west-3', aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
